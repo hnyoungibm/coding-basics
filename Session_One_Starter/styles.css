@@ -1,0 +1,36 @@
+/*Step 2: Style the body (the foundation)*/
+body {
+
+}
+
+/* Step 3: Control the width of each section*/
+.header,
+.controls,
+.board {
+
+}
+
+/* Step 4: Style the input and button (make it feel like UI)*/
+input {
+
+}
+
+button {
+
+}
+
+/*Step 5: Create the moodboard grid*/
+.board {
+
+}
+
+/* Step 6: Styling logic so that tiles square + keep images contained*/
+.board div {
+
+}
+
+/* Step 7: Styling logic so that images scale nicely in each square*/
+.board img {
+  
+}
+
