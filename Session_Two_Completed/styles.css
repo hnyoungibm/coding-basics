@@ -1,0 +1,95 @@
+/*Step 2: Style the body (the foundation)*/
+body {
+  font-family: system-ui, sans-serif; /* Font used is webapp */
+  margin: 0;
+  background: #f7f7f5; /* Setting background colour */
+
+  /* Styling commands to center website content
+    
+    This means all sections naturally line up in the middle.
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Step 3: Control the width of each section*/
+.header,
+.controls,
+.board {
+  width: 100%;
+  max-width: 800px; /* max-width keeps things readable*/
+  padding: 0 32px; /* Padding gives breathing room on the sides*/
+}
+
+/* Step 4: Style the input and button (make it feel like UI)*/
+input {
+  flex: 1; /* flex: 1; makes the input take up all available space */
+  width: 80%; /* width: 80%; gives the input a base size */
+  padding: 12px; /* Padding makes it easier to click and type */
+  font-size: 16px; /* font-size: 16px; makes the text easier to read */
+  border-radius: 8px; /* border-radius: 8px; gives the input rounded corners */
+  border: 1px solid #ccc; /* Light grey border */
+}
+
+button {
+  padding: 12px 16px; /* Padding makes the button easier to click */
+  font-size: 16px; /* font-size: 16px; makes the text easier to read */
+  border-radius: 8px; /* border-radius: 8px; gives the button rounded corners */
+  border: none; /* No border */
+  background: #333; /* Dark background color */
+  color: white; /* White text color */
+  cursor: pointer; /* cursor: pointer; changes the cursor on hover */
+}
+
+/*Step 5: Create the moodboard grid*/
+.board {
+  display: grid; 
+    /*  display: grid; tells the browser treat this area like a grid layout
+        Just like turning on Auto Layout in Figma, it gives us a system for 
+        arranging items automatically.
+    */ 
+
+  grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); 
+       creates 3 equal-width columns. 
+       1fr means "one fraction" of the available space.
+    */
+
+  gap: 20px;
+    /* gap: 20px; adds spacing between the grid items */
+
+  margin-top: 32px;
+    /* margin-top: 32px; adds space above the grid */
+}
+
+/* Step 6: Styling logic so that tiles square + keep images contained*/
+.board div {
+  aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; ensures each grid item is a square */
+
+  background: #e0e0e0;
+    /* Light grey background as a placeholder */
+
+  border-radius: 8px;
+  /* border-radius: 8px; gives the squares rounded corners */
+  
+  overflow: hidden;
+  /* overflow: hidden; ensures images don't spill out of the squares */
+}
+
+/* Step 7: Styling logic so that images scale nicely in each square*/
+.board img {
+  width: 100%;
+    /* width: 100%; and height: 100%; make the image fill the entire square */  
+
+  height: 100%;
+    /* width: 100%; and height: 100%; make the image fill the entire square */  
+
+  object-fit: cover;
+    /* object-fit: cover; makes sure the image fills the square without 
+       distortion 
+    */
+}
+
